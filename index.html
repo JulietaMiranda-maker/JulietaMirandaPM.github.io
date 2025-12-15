@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --beige: #f6f1eb;
+      --beige-dark: #e8dfd6;
+      --violet: #3f2a56;
+      --orange: #e07a3f;
+      --rose: #c97b84;
+      --text: #2e2a27;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--beige);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--violet);
+    }
+
+    header p {
+      max-width: 600px;
+      font-size: 1.1rem;
+    }
+
+    .cv-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--violet);
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 500;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .cv-button:hover {
+      transform: translateY(-2px);
+      background-color: #2f1f41;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--violet);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      background-color: var(--beige-dark);
+      width: fit-content;
+    }
+
+    .card h3 {
+      margin: 0;
+      color: var(--violet);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    .card a {
+      margin-top: auto;
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b625b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hola, soy [Tu Nombre]</h1>
+    <p>
+      Project Manager con curiosidad infinita. Este es mi espacio personal donde documento proyectos,
+      aprendizajes y experimentos que hago en mi tiempo libre.
+    </p>
+    <a class="cv-button" href="cv.pdf" download>Descargar CV</a>
+  </header>
+
+  <section>
+    <h2>Proyectos & Estudios</h2>
+    <div class="projects">
+
+      <div class="card">
+        <span class="tag">Project Management</span>
+        <h3>Nombre del Proyecto</h3>
+        <p>
+          Breve descripción del proyecto. Qué problema resolviste, qué aprendiste o por qué es relevante.
+        </p>
+        <a href="#">Ver más →</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Estudio personal</span>
+        <h3>Título del Estudio</h3>
+        <p>
+          Resumen corto del tema que estuviste investigando o aprendiendo.
+        </p>
+        <a href="#">Leer →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2025 · Portfolio personal
+  </footer>
+
+</body>
+</html>
