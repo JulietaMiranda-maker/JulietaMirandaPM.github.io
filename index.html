@@ -121,14 +121,18 @@
 .portfolio-title::after {
   content: "";
   position: absolute;
+  bottom: 0;
   left: 0;
-  bottom: -6px;
-  width: 42px;
+  width: 90px;
   height: 3px;
   background: linear-gradient(
     90deg,
-    var(--violet-dark),
-    var(--accent-soft)
+    var(--accent-soft),
+    var(--violet-dark)
+  );
+  border-radius: 4px;
+}
+
   );
 }
 
@@ -152,17 +156,20 @@
 
     }
 
-    .cv-button {
-      position: absolute;
-      top: 48px;
-      right: 90px;
-      padding: 14px 30px;
-      background-color: var(--accent-cta);
-      color: white;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 14px;
+    ..cv-button {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1.5px solid var(--accent-soft);
+  background-color: transparent;
+  color: var(--violet-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
     }
 .project-button {
   display: inline-block;
