@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Julieta Miranda · Project Manager</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -18,67 +21,105 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
       background-color: var(--bg-main);
+      font-family: 'Inter', sans-serif;
       color: var(--text-main);
     }
 
+    /* HEADER */
     header {
-      padding: 80px 40px 60px;
-      text-align: center;
+      position: relative;
+      padding: 80px 80px 60px;
+      border-bottom: 1px solid rgba(47,37,69,0.15);
     }
 
     h1 {
-      font-size: 44px;
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
       margin-bottom: 12px;
-      color: var(--violet-dark);
+      background: linear-gradient(90deg, var(--violet-dark), var(--violet-medium));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     h2 {
       font-size: 20px;
       font-weight: 400;
       color: var(--violet-medium);
+      max-width: 600px;
     }
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
+    /* TOP RIGHT */
+    .top-right {
+      position: absolute;
+      top: 40px;
+      right: 80px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
 
-    h3 {
-      color: var(--violet-dark);
-      margin-bottom: 24px;
-    }
-
-    .card {
-      background: var(--bg-card);
-      border-radius: 18px;
-      padding: 28px;
-      margin-bottom: 24px;
-      box-shadow: 0 12px 30px rgba(47,37,69,0.08);
-      border-left: 6px solid var(--accent-soft);
-    }
-
-    .card h4 {
-      margin-top: 0;
-      color: var(--violet-dark);
-    }
-
-    .card p {
+    .photo-frame {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px dashed var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
       color: var(--text-muted);
-      line-height: 1.6;
+      text-align: center;
     }
 
     .cv-button {
-      display: inline-block;
-      margin-top: 36px;
-      padding: 14px 34px;
+      padding: 12px 26px;
       background-color: var(--accent-cta);
       color: white;
       text-decoration: none;
       border-radius: 999px;
       font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 80px;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: var(--violet-dark);
+      position: relative;
+    }
+
+    h3::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: var(--accent-soft);
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 36px;
+      margin-bottom: 32px;
+      box-shadow: 0 12px 32px rgba(47,37,69,0.08);
+      border-left: 6px solid var(--accent-soft);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
     }
 
     .highlight {
@@ -88,63 +129,125 @@
       color: var(--violet-dark);
       font-weight: 500;
     }
+
+    .icon {
+      font-size: 18px;
+      margin-right: 8px;
+    }
+
+    /* SKILLS GRID */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 60px 80px;
+      border-top: 1px solid rgba(47,37,69,0.15);
+    }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Julieta Miranda</h1>
-    <h2>
-      <span class="highlight">Project Manager</span> · Strategy, execution & creativity
-    </h2>
+<header>
+  <div class="top-right">
+    <a class="cv-button" href="CV-Julieta-Miranda.pdf" target="_blank">Download CV</a>
+    <div class="photo-frame">Your photo</div>
+  </div>
 
-    <a class="cv-button" href="CV-Julieta-Miranda.pdf" target="_blank">
-      Descargar CV
-    </a>
-  </header>
+  <h1>Julieta Miranda</h1>
+  <h2>
+    <span class="highlight">Project Manager</span> focused on building clarity,
+    structure and momentum across complex projects
+  </h2>
+</header>
 
-  <section>
+<section>
   <h3>About me</h3>
 
   <div class="card">
     <p>
-      I am a <span class="highlight">Project Manager</span> with a strong
-      interest in understanding the problem before jumping into solutions.
-      I value structured thinking, clear processes and intentional decision-making.
+      I am a <span class="highlight">Project Manager</span> who believes that
+      strong projects are built at the intersection of strategy, execution
+      and people.
     </p>
 
     <p>
-      I enjoy organizing complexity, translating ideas into actionable plans
-      and supporting teams throughout the entire project lifecycle — from
-      initial concept to final delivery.
+      I approach work with a structured mindset, clear communication and a
+      strong sense of ownership. I value understanding the “why” behind each
+      initiative before moving into action.
+    </p>
+
+    <p>
+      My goal is to create environments where teams can focus, collaborate
+      effectively and deliver meaningful outcomes.
     </p>
   </div>
 </section>
+
 <section>
   <h3>Projects</h3>
 
   <div class="card">
-    <h4>Portfolio Website · GitHub Pages</h4>
+    <p><span class="icon">📁</span><strong>Portfolio Website · GitHub Pages</strong></p>
 
     <p>
       <span class="highlight">Context:</span>
-      Personal initiative to create a space to document and showcase projects and studies.
+      Personal initiative to design and structure a professional portfolio
+      to document projects, studies and ongoing learning.
     </p>
 
     <p>
       <span class="highlight">Role:</span>
-      Project Manager — planning structure, defining scope and organizing content.
+      Project Manager — defining scope, organizing content, prioritizing features
+      and managing delivery.
     </p>
 
     <p>
       <span class="highlight">Key takeaway:</span>
-      Strengthened my ability to structure work independently and communicate ideas clearly.
+      Reinforced my ability to independently structure projects with a
+      user-centered and execution-focused approach.
     </p>
   </div>
-
 </section>
+
+<section>
+  <h3>How I work</h3>
+
+  <div class="skills">
+    <div class="card">
+      <p><span class="icon">🧭</span><strong>Strategic thinking</strong></p>
+      <p>Aligning goals, priorities and constraints before execution.</p>
+    </div>
+
+    <div class="card">
+      <p><span class="icon">🗂</span><strong>Organization & planning</strong></p>
+      <p>Breaking complexity into clear, actionable steps.</p>
+    </div>
+
+    <div class="card">
+      <p><span class="icon">💬</span><strong>Clear communication</strong></p>
+      <p>Facilitating alignment between stakeholders and teams.</p>
+    </div>
+
+    <div class="card">
+      <p><span class="icon">🚀</span><strong>Execution mindset</strong></p>
+      <p>Driving projects forward while adapting to change.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="card">
+    <p>
+      I am particularly interested in projects where clarity, structure and
+      human collaboration are as important as results.
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>
-
